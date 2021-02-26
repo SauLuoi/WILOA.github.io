@@ -1,0 +1,26 @@
+@import "var";
+*{
+    font-family: 'Nunito Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    box-sizing: border-box;
+    body{
+        background: $color-primary;
+    }
+    .button-login{
+        border-radius: 1.25rem;
+        color: $color-white;
+        font-weight: 800;
+    }
+    .button{
+        border-radius: 6.25rem;
+        font-size: 1rem;
+        color: $color-white;
+        background: $color-btn;
+    }
+    .f-width{
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+}

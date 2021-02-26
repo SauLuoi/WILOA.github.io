@@ -1,0 +1,319 @@
+@import "use";
+@import "var";
+@import "setup";
+.overload {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: $color-black;
+    opacity: 0.7;
+    display: none;
+    z-index: 2;
+}
+
+.section {
+    &_1 {
+        background-image: url(../images/BACKGROUND.png);
+        background-repeat: no-repeat;
+        object-fit: contain;
+        background-size: 100%;
+        .fix-padding {
+            padding-bottom: 20rem;
+        }
+        .header {
+            padding-top: 2.35rem;
+            &_menu {
+                ul {
+                    li {
+                        margin-left: 2.4125rem;
+                        a {
+                            font-size: 0.875rem;
+                            color: $color-white;
+                            line-height: 1.2;
+                        }
+                    }
+                }
+                button {
+                    background: $color-login;
+                    font-size: 0.875rem;
+                    padding: 0.5875rem 1.5625rem 0.75rem 1.625rem;
+                    margin-left: 3rem;
+                    margin-top: 2px;
+                }
+            }
+            &_mobile {
+                display: none;
+            }
+            &_mobile-menu{
+                z-index: 999;
+                padding: 1.5rem;
+                position: fixed;
+                width: 80%;
+                background: white;
+                right: 0;
+                top: 0;
+                text-align: right;
+                height: 100%;
+                .menu-top{
+                    padding-bottom: 1rem;
+                    .close{
+                        i{
+                            font-size: 35px;
+                        }
+                    }
+                }
+                .menu-bottom{
+                    ul{
+                        li{
+                            padding: .5rem 0;
+                            a{
+                                color: $color-black;
+                                font-size: 1.2rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .text {
+            color: $color-white;
+            width: 55%;
+            margin-top: 10.35rem;
+            &_title {
+                font-size: 4rem;
+                font-weight: 900;
+                line-height: 1.2;
+                margin-bottom: 1.25rem;
+            }
+            &_content {
+                font-size: 1.25rem;
+                line-height: 1.6;
+                padding-right: 8.5rem !important;
+                padding-top: 2px;
+                letter-spacing: 0.5px;
+            }
+        }
+    }
+    &_2 {
+        background: $color-bg-top;
+        padding: 69px 0 60px 0;
+        &-left {
+            div {
+                margin-left: 3.125rem;
+                &:first-of-type {
+                    margin-left: 20px !important;
+                }
+            }
+        }
+        &-right {
+            margin-right: 20.5px;
+            button {
+                padding: 1.205rem 2.5rem 1.25rem 2.5rem;
+                letter-spacing: 0.9px;
+                @extend .button;
+                span {
+                    padding-left: 1.875rem;
+                }
+            }
+        }
+    }
+    &_3 {
+        margin: 9.125rem 0 8.0625rem;
+        &-content {
+            background-image: url(../images/BACKGROUD.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: 20px;
+            height: 420px;
+            &-flex {
+                height: 100%;
+                text-align: center;
+                div {
+                    width: 100%;
+                    color: $color-white;
+                    h1 {
+                        font-weight: 900;
+                        font-size: 4rem;
+                        padding: 0 16.5rem;
+                        line-height: 1.2;
+                        margin-bottom: 3.125rem;
+                    }
+                    button {
+                        @extend .button;
+                        background: $color-login;
+                        padding: 1.4rem 3.5rem 1.6rem 3.3rem;
+                        font-weight: 800;
+                        text-transform: uppercase;
+                        transition: all 0.5s;
+                        &:hover {
+                            color: $color-login;
+                            background: $color-white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &_4 {
+        &-title {
+            article {
+                text-align: center;
+                letter-spacing: 0.5px;
+                font-size: 2.375rem;
+                font-weight: 800;
+                text-transform: capitalize;
+                line-height: 1.6;
+            }
+            .content {
+                margin: 2.8125rem 0 5rem 0;
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                column-gap: 1.6875rem;
+                &-item {
+                    border-radius: 5px;
+                    background: $color-white;
+                    padding: 0;
+                    &-box {
+                        &-bottom {
+                            padding: 1.25rem 1.5rem 1.5rem 1.3rem;
+                            &-text {
+                                padding-bottom: 4px;
+                                p {
+                                    &:first-of-type {
+                                        font-size: 1.2rem;
+                                        font-weight: 800;
+                                        letter-spacing: 1px;
+                                        line-height: 1.7;
+                                        text-transform: initial;
+                                    }
+                                    &:last-of-type {
+                                        line-height: 1.4;
+                                        letter-spacing: -0.3px;
+                                        color: $color-note-text;
+                                        padding: 1.25rem 0;
+                                    }
+                                }
+                                border-bottom: solid 1px$color-note-text;
+                            }
+                            &-icon {
+                                padding-top: 1.1rem;
+                                div {
+                                    &:first-of-type {
+                                        img {
+                                            margin-right: 0.5625rem;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &-button {
+            text-align: center;
+            button {
+                @extend .button;
+                padding: 23px 46px 20px 55px;
+                text-transform: uppercase;
+                transition: all 0.5s;
+                border: solid 1px $color-btn;
+                &:hover {
+                    background: $color-white;
+                    color: $color-btn;
+                    border: solid 1px $color-btn;
+                }
+            }
+        }
+    }
+    &_5 {
+        margin: 14.375rem 0 14.1875rem 0;
+        position: relative;
+        &-content {
+            &-left {
+            }
+            &-right {
+                padding-left: 3.8rem;
+                p {
+                    &:first-of-type {
+                        font-size: 1.5rem;
+                        line-height: 1.8;
+                        letter-spacing: 1px;
+                        color: $color-body-text;
+                        padding-bottom: 4.1rem;
+                    }
+                    &:last-of-type {
+                        font-weight: bold;
+                        color: $color-bg-footer;
+                        font-size: 1.5rem;
+                        padding-top: 3rem;
+                        span {
+                            display: block;
+                            color: $color-note-text;
+                            font-size: 1rem;
+                            font-weight: normal;
+                        }
+                    }
+                }
+                .img- {
+                    position: relative;
+                    img {
+                        width: 8%;
+                        position: absolute;
+                        left: 0;
+                        bottom: -7px;
+                    }
+                    div {
+                        border-top: solid 1px gray;
+                        margin-left: 12%;
+                        padding-bottom: 5%;
+                    }
+                }
+            }
+            &-button {
+                position: absolute !important;
+                right: 8%;
+                bottom: 0;
+                z-index: 1;
+                button {
+                    background: $color-btn;
+                    border-radius: 100%;
+                    padding: 12px;
+                    border: solid 0.5px $color-white;
+                    &:first-of-type {
+                        background: $color-white !important;
+                        border: solid 0.5px $color-btn;
+                        margin-right: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+    &_6 {
+        background: $color-bg-footer;
+        text-align: center;
+        color: $color-white;
+        padding: 24px 0;
+        font-size: 1rem;
+        line-height: 1.6;
+        letter-spacing: 1px;
+    }
+}
+
+.section_5-content-right{
+    position: relative;
+    .img- {
+        position: relative;
+        img {
+            width: 8%;
+            position: absolute;
+            left: 0;
+            bottom: -7px;
+        }
+        div {
+            border-top: solid 1px gray;
+            margin-left: 12%;
+            padding-bottom: 5%;
+        }
+    }
+}
